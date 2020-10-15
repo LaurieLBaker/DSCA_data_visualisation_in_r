@@ -1,0 +1,127 @@
+library-tidyverse	
+library-extra	
+guess-data-from-plot-og	df_mpg	g	.Random.seed
+guess-data-from-plot-0	
+guess-data-from-plot-2	
+guess-data-from-plot-3	
+guess-data-from-plot-1	
+guess-data-from-plot-4	
+guess-data-from-plot-5	
+guess-data-from-plot-6	
+guess-data-from-plot-data	
+tidy-messy1	messy_pop	pop_simple
+tidy-tidy1	tidy_pop
+geom_demo	df_geom	g_geom	minimal_theme
+ggplot2-geom-names	old_width
+first-plot1a	
+first-plot1a-out	
+first-plot1b	
+first-plot1b-out	
+first-plot1c	
+first-plot1c-out	
+first-plot1	
+first-plot1-out	
+first-plot2-fake	
+first-plot2-fake-out	
+first-plot2	
+first-plot2-out	
+first-plot3	
+first-plot3-out	
+geom_facet_setup	g	tidy_pop2
+geom_facet	
+geom_grid	
+labs-ex	g
+coord-ex	
+coord-ex2	
+scale_ex1	
+scale_ex2	
+scale_ex4	
+unnamed-chunk-1	
+unnamed-chunk-2	
+theme_set	my_theme
+unnamed-chunk-3	
+unnamed-chunk-4	
+ggsave	
+unnamed-chunk-5	
+reset_theme	
+head-gapminder	
+summary-gapminder	
+gapminder-le-gdp-1	
+gapminder-le-gdp-2	
+gapminder-le-gdp-3	
+gapminder-le-gdp-4	
+gapminder-le-gdp-5	
+gapminder-le-gdp-6	
+gapminder-le-gdp-7	
+gapminder-le-gdp-8	
+gapminder-gdp-year-1	
+gapminder-gdp-year-2	
+gapminder-le-year-1	
+gapminder-le-year-2	
+gapminder-le-year-3	
+gapminder-le-year-4	
+gapminder-le-year-5	
+gapminder-le-year-6	
+gapminder-le-year-7	
+gapminder-le-year-8	
+gapminder-americas-data	americas
+unnamed-chunk-6	g_hra
+gapminder-americas-1	
+gapminder-americas-2	
+gapminder-americas-3	
+gapminder-americas-4	
+gapminder-americas-5	
+gapminder-americas-6	
+gapminder-americas-7	
+gapminder-americas-8	
+gapminder-americas-9	
+gapminder-americas-10	
+gapminder-all-americas-1	
+gapminder-all-americas-2	
+gapminder-all-americas-3	
+gapminder-all-americas-4	
+gapminder-all-americas-5	
+gapminder-all-americas-6	
+gapminder-all-americas-7	
+gapminder-all-americas-8	g
+gapminder-all-americas-9	
+hans-rosling-1	g_hr
+hans-rosling-1a	g_hr
+hans-rosling-2	g_hr
+hans-rosling-3	g_hr
+hans-rosling-final	
+unnamed-chunk-7	g_hra
+hans-rosling-animated	
+guess-data-from-plot-data-table	
+guess-data-from-plot-7	
+unnamed-chunk-8	g_hra
+tidy-tidy_show	tidy_pop
+tidy-tidy-show	tidy_pop
+tidy-tidy-show-2	tidy_pop
+theme_ex1	
+first-plot-geom-1	g
+gapminder-americas-11	
+gapminder-americas-2-1	
+gapminder-americas-2-2	
+geom_label_setup	g	tidy_pop2
+geom_coord_setup	g	tidy_pop2
+geom_scale_setup	g	tidy_pop2
+example-table	table_ex
+example-table2	table_ex
+example-table3	table_ex
+Life expectancy in the Americas 1952 vs 2007	
+What does fct_reorder and coord_flip do	gap_lifeExpdiff_df	p1
+Reproduce the population by year plot	
+What is the relationship between population and year by continent	
+exercise-1	
+exercise-2	gap_lifeExpdiff_df	p1
+exercise-1-answer	
+Population by year plot	
+exercise-3	
+exercise-3-blanks	
+exercise-3-solution	
+What is the relationship between population and year by continent solution	
+exercise-3-show	
+What is the relationship between population and year by continent solution plot	
+gapminder-americas-2-2-1	
+gapminder-americas-2-2-2	

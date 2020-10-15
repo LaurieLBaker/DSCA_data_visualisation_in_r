@@ -288,6 +288,88 @@ g + theme(legend.position = 'bottom')
 
 ```
 
+# Exercises
+
+
+## Exercises 1
+
+Add the title "Life Expectancy in the Americas 1952 vs 2007" using `ggtitle()`.
+
+```{r exercise-1}
+
+gapminder %>%
+  filter(continent == "Americas", 
+         year %in% c(1952, 2007)) %>%
+  mutate(year = as.factor(year)) %>%
+  ggplot() +
+    geom_point(mapping = aes(y = country, 
+                             x = lifeExp, 
+                             colour = year)) +
+    labs(x = "Life Expectancy", 
+         y = "Country", 
+         colour = "Year")
+```
+
+## Exercise 2
+
+* Rerun the plot removing fct_reorder, what does fct_reorder do?
+
+* Rerun the plot again this time removing `coord_flip()`. What does the function `coord_flip()` change in the plot?
+
+```{r exercise-2}
+
+gap_lifeExpdiff_df <- gapminder %>%
+  group_by(country) %>% 
+  summarise(life_exp_diff = max(lifeExp) - min(lifeExp)) %>% 
+  top_n(n = 5)
+
+p1 <- ggplot(gap_lifeExpdiff_df) +
+    geom_col(mapping = aes(x = fct_reorder(country, life_exp_diff), y = life_exp_diff), fill = "blue") +
+    labs(y = "Difference in Life Expectancy", x = "") +
+    ggtitle("Difference in Life Expectancy", sub = "Top 5 countries with the largest difference (1952-2007)") +
+    ylim(0, 40)
+
+p1 + coord_flip()
+```
+
+
+## Exercise 3
+
+Try recreating the plot in the slides by filling in the blanks below
+
+```{r exercise-3-blanks, eval = FALSE}
+
+gapminder %>%
+  filter(country %in% c("Argentina", "Chile", "Peru", "Uruguay")) %>%
+  select(year, pop, country) %>%
+  mutate(pop = pop/10^6) %>%
+  ggplot() +
+    geom_point(mapping = aes(x = BLANK, 
+                             y = BLANK, 
+                             colour = BLANK)) +
+  facet_wrap(country ~ .) +
+  ggtitle("Population over time") +
+  labs(x = "Year", 
+       y = "Population in Millions", 
+       colour = "Country")
+```
+## Exercise 4
+
+What's the relationship between Population and Year by continent? Fill in the blanks to find out. 
+
+```{r What is the relationship between population and year by continent, eval = FALSE}
+
+gapminder %>%
+  ggplot() +
+    geom_line(mapping = aes(x = year, 
+                            y = BLANK, 
+                            group = country, 
+                            colour = BLANK)) + 
+    labs(y = "Populations (Millions)", x = "Year", colour = "Continent") +
+    facet_wrap(. ~ BLANK)
+
+
+```
 
 # Live coding, examples using the gapminder data set
 
@@ -676,6 +758,47 @@ ggplot(americas,
   geom_col() +
   labs(fill = "Country") #<< 
 ```
+
+### What's the difference between a bar chart and a pie chart?
+
+```{r gapminder-americas-2-2-1}
+
+ggplot(americas,
+  aes(x = " ", #<<
+      y = pop,
+      fill = fct_reorder(
+        country, pop) 
+      )
+  ) +
+  geom_col() +
+  labs(fill = "Country") +
+  coord_polar(theta = "y", start = 0) #<<
+  
+```
+
+### What if we want to see each year?
+
+
+```{r gapminder-americas-2-2-2}
+
+ggplot(americas,
+  aes(x = " ", 
+      y = pop,
+      fill = fct_reorder(
+        country, pop) 
+      )
+  ) +
+  geom_col() +
+  labs(fill = "Country") +
+  coord_polar(theta = "y", start = 0) +
+  facet_wrap(~year) #<<
+  
+```
+
+
+Short Aside: [Why you should consider alternatives to pie charts](https://www.data-to-viz.com/caveat/pie.html)
+
+### Returning to bar charts
 
 Bars are "stacked", can we separate?
 
