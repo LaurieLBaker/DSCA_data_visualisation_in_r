@@ -55,4 +55,4 @@ Students should have completed the course Introduction to R. A recent version of
 
 **Acknowledgements**
 
-These slides are an updated version of gadenbuie's [gentle introduction to ggplot2[(https://pkg.garrickadenbuie.com/gentle-ggplot2/#1).
+These slides are an updated version of gadenbuie's [gentle introduction to ggplot2](https://pkg.garrickadenbuie.com/gentle-ggplot2/#1).
