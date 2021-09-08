@@ -1,4 +1,8 @@
-# Data Visualisation in R
+# Data Visualization
+
+Link to the [Github Pages website](https://laurielbaker.github.io/DSCA_data_visualion_in_r) hosting the slides for this repo.
+
+[Data Visualization Slides](slides/index.html)
 
 ### Version 1
 
