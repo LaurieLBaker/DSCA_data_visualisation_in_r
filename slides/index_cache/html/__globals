@@ -10,7 +10,7 @@ guess-data-from-plot-5	g	labs	theme_bw
 guess-data-from-plot-6	g	labs	theme_bw
 guess-data-from-plot-data	%>%	::	class	cty	df_mpg	hwy	manufacturer	model	select
 tidy-messy1	%>%	::	^	>=	c	country	filter	gapminder	mutate	pop	select	spread	year
-tidy-tidy1	%>%	as_table	country	gather	head	messy_pop
+tidy-tidy1	!	%>%	as_table	country	head	messy_pop	pivot_longer
 geom_demo	$<-	::	~	aes	data_frame	element_blank	element_rect	element_text	geom_boxplot	geom_col	geom_density	geom_histogram	geom_line	geom_point	ggplot	ggtitle	list	map	rnorm	set.seed	theme	theme_bw	x	xlim	y
 ggplot2-geom-names	$	%>%	.	grep	lsf.str	options
 first-plot1a	ggplot	tidy_pop
@@ -37,10 +37,10 @@ scale_ex1	c	g	scale_color_manual
 scale_ex2	g	scale_y_log10
 scale_ex4	c	g	scale_x_discrete
 unnamed-chunk-1	element_text	g	theme	theme_bw
-unnamed-chunk-2	g	my_theme	theme_set
+unnamed-chunk-2	g	theme
 theme_set	element_blank	element_rect	element_text	theme	theme_bw	theme_set
-unnamed-chunk-3	g	my_theme	theme	theme_set
-unnamed-chunk-4	library
+unnamed-chunk-3	library
+unnamed-chunk-4	%>%	americas	head
 ggsave	ggsave	my_plot
 unnamed-chunk-5	%>%	americas	head
 reset_theme	theme_gray	theme_set
@@ -96,8 +96,8 @@ guess-data-from-plot-data-table	%>%	::	class	cty	df_mpg	hwy	manufacturer	model	s
 guess-data-from-plot-7	g	ggtitle	labs	theme_bw
 unnamed-chunk-8	::	^	aes	anim_save	animate	c	country	element_blank	element_rect	element_text	gapminder	gdpPercap	geom_point	ggplot	ggtitle	guides	labs	library	lifeExp	pop	scale_color_manual	scale_size	scale_x_log10	theme	theme_minimal	transition_states	year
 tidy-tidy_show	%>%	as_table	country	gather	head	messy_pop
-tidy-tidy-show	%>%	as_table	country	gather	head	messy_pop
-tidy-tidy-show-2	%>%	as_table	country	gather	head	messy_pop
+tidy-tidy-show	!	%>%	as_table	country	head	messy_pop	pivot_longer
+tidy-tidy-show-2	!	%>%	as_table	country	head	messy_pop	pivot_longer
 theme_ex1	g	theme_bw
 first-plot-geom-1	aes	country	geom_line	geom_point	ggplot	pop	tidy_pop	year
 gapminder-americas-11	aes	americas	country	geom_line	ggplot	labs	lifeExp	year
@@ -125,3 +125,4 @@ exercise-3-show	%>%	^	~	aes	c	country	facet_wrap	filter	gapminder	geom_point	ggp
 What is the relationship between population and year by continent solution plot	%>%	^	~	aes	continent	country	facet_wrap	gapminder	geom_line	ggplot	labs	pop	year
 gapminder-americas-2-2-1	aes	americas	coord_polar	country	fct_reorder	geom_col	ggplot	labs	pop
 gapminder-americas-2-2-2	~	aes	americas	coord_polar	country	facet_wrap	fct_reorder	geom_col	ggplot	labs	pop
+gapminder-americas-2-2-a	aes	americas	country	fct_reorder	geom_col	ggplot	labs	pop	year

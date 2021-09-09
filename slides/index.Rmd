@@ -631,7 +631,7 @@ knitr::kable(messy_pop, format = 'html')
 
 .right-column[
 ```{r tidy-tidy1, result='asis', echo=-2}
-tidy_pop <- gather(messy_pop, 'year', 'pop', -country)
+tidy_pop <- pivot_longer(data = messy_pop, cols = !country, names_to = "year", values_to = "pop")
 tidy_pop %>%
   head(4) %>%
   as_table()
@@ -664,7 +664,7 @@ Map data to visual elements or parameters
 - country
 
 ```{r tidy-tidy-show, result='asis', echo=F}
-tidy_pop <- gather(messy_pop, 'year', 'pop', -country)
+tidy_pop <- pivot_longer(data = messy_pop, cols = !country, names_to = "year", values_to = "pop")
 tidy_pop %>%
   head(4) %>%
   as_table()
@@ -684,7 +684,7 @@ Map data to visual elements or parameters
 
 
 ```{r tidy-tidy-show-2, result='asis', echo=F}
-tidy_pop <- gather(messy_pop, 'year', 'pop', -country)
+tidy_pop <- pivot_longer(data = messy_pop, cols = !country, names_to = "year", values_to = "pop")
 tidy_pop %>%
   head(4) %>%
   as_table()
@@ -1343,16 +1343,7 @@ All plots will now use this theme!
 
 .right-column[
 ```{r, eval = TRUE, out.width="90%", fig.width=6, dependson='theme_set', echo = -1}
-theme_set(my_theme)
-g 
-```
-]
 
----
-
-.right-column[
-```{r, eval = TRUE, out.width="90%", fig.width=6, dependson='theme_set', echo = -1}
-theme_set(my_theme)
 g + theme(legend.position = 'bottom')
 ```
 ]
@@ -2256,7 +2247,7 @@ Short Aside: [Why you should consider alternatives to pie charts](https://www.da
 
 Excellent tutorial by Jenny Bryan ["Be the Boss of your factors"](https://stat545.com/factors-boss.html)
 
-```{r gapminder-americas-2-2, fig.show="hide"}
+```{r gapminder-americas-2-2-a, fig.show="hide"}
 
 ggplot(americas,
   aes(x = year,
@@ -2271,7 +2262,7 @@ ggplot(americas,
 ]
 
 .right-plot[
-![](`r knitr::fig_chunk("gapminder-americas-2-2", "png")`)
+![](`r knitr::fig_chunk("gapminder-americas-2-2-a", "png")`)
 ]
 
 What if we want to see the bars side by side
